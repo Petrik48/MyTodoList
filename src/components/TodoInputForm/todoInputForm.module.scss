@@ -1,0 +1,53 @@
+.todoInputForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 40px;
+  width: 530px;
+  border: 1px solid #333;
+  border-radius: 50px;
+}
+
+.todoInput {
+  border: 0;
+  border-radius: 50px;
+  padding-left: 20px;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  color: #929191;
+
+  &::placeholder {
+    font-size: 16px;
+    color: #929191;
+  }
+
+  &:focus {
+    outline: 2px solid #8e8d8d;
+    outline-offset: 5px;
+  }
+}
+
+.todoButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 3em;
+  border: 1px solid #329e25;
+  color: #329e25;
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 40px 40px #329e25 inset;
+  }
+
+}

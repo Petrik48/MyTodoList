@@ -1,0 +1,76 @@
+.todo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #333;
+  border-radius: 50px;
+  padding: 5px 5px 5px 20px;
+  width: 100%;
+  height: 61px;
+  transition: all .2s
+}
+
+.notedTodo {
+  color: #000 !important;
+  background-color: transparent;
+}
+
+.todo:before {
+  display: block;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  content: '';
+  color: #000 !important;
+  background: rgba(0, 128, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.todo.notedTodo::before {
+  left: 0%;
+  right: auto;
+  width: calc(100% - 50px);
+}
+
+.todoButtonsWrapper {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  bottom: -1px;
+  width: 140px;
+}
+
+.todoMarkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  border-top-right-radius: 50px;
+  height: 50%;
+  width: 101%;
+  background: #329e25;
+  color: #fff;
+  transition: transform .2s ease-in-out;
+}
+
+.todoDeleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  border-bottom-right-radius: 50px;
+  height: 50%;
+  width: 101%;
+  background: #d86731;
+  color: #fff;
+  transition: transform .2s ease-in-out;
+}
+
+.todoMarkButton:hover,
+.todoDeleteButton:hover {
+  transform: scale(1.05);
+}

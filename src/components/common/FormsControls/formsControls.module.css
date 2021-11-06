@@ -1,0 +1,42 @@
+.formControl {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.formControl textarea,
+.formControl input {
+  border: 0;
+  border-bottom: 1px solid #C8C5D1;
+  padding: 0 0 5px 5px;
+  height: 100%;
+  width: 390px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #B0B0B0;
+}
+
+.formControl textarea:focus,
+.formControl input:focus {
+  outline: none;
+}
+
+.formControl textarea::placeholder,
+.formControl input::placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: #B0B0B0;
+}
+
+.formControl.error input,
+.formControl.error textarea {
+  border-color: #F06A4D;
+}
+
+.formControl.error span {
+  display: none;
+  /*position: absolute;*/
+  /*left: 5px;*/
+  /*top: -25px;*/
+  /*color: #680202;*/
+  /*font-size: 16px;*/
+}
